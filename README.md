@@ -1,6 +1,6 @@
 ![Agro Vision](agro_vision_cover.png)
 
-#### Características
+#### Tecnologias
 
 - 💻 C#, .Net Framework
 - 🌎 Visualizador de Mapas do Google
@@ -12,8 +12,8 @@
 
 #### Descrição do Projeto
 
-O AgroVision é um sistema comoposto por software e app para a execução
-das missões ([AgroVision Cabin](https://github.com/Rafa-Matheus/AgroVisionCabin)), que possibilita gerar planos de vôos autônomos para drones DJI das famílias
+O AgroVision é um sistema composto por software e app para a execução
+das missões de mapeamento ([AgroVision Cabin](https://github.com/Rafa-Matheus/AgroVisionCabin)), que possibilita gerar planos de vôos autônomos para drones DJI das famílias
 Phantom e Mavic, com a finalidade de obter imagens de áreas de plantio a partir de
 câmeras multiespectrais, e em seguida fazer o processamento das mesmas.
 
