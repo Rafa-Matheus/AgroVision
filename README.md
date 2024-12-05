@@ -7,7 +7,7 @@
 - ☀️ API de clima (AccuWeather)
 - 🤖 API para gerenciar missões de drones DJI
 - 📱 API do ADB para transferência das missões no [AgroVision Cabin](https://github.com/Rafa-Matheus/AgroVisionCabin)
-- 🔢 Algorítmos para cálculo da geolocalização
+- 🔢 Algoritmos para cálculo da geolocalização
 
 #### Descrição do Projeto
 
