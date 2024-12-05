@@ -6,6 +6,7 @@
 - 🌎 Visualizador de Mapas do Google
 - ☀️ API de clima (AccuWeather)
 - 🤖 API para gerenciar missões de drones DJI
+- 📷 API para manipular imagens de câmeras multispectrais (Como a MAPIR Survey3)
 - 📱 API do ADB para transferência das missões no [AgroVision Cabin](https://github.com/Rafa-Matheus/AgroVisionCabin)
 - 🔢 Algoritmos para cálculo da geolocalização
 
