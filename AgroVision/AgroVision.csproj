@@ -1,0 +1,637 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="..\packages\EntityFramework.6.4.4\build\EntityFramework.props" Condition="Exists('..\packages\EntityFramework.6.4.4\build\EntityFramework.props')" />
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{107937F9-59D4-4684-A7D5-BC44BD967EB9}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>AgroVision</RootNamespace>
+    <AssemblyName>AgroVision</AssemblyName>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <TargetFrameworkProfile />
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>icon.ico</ApplicationIcon>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x64'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\x64\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x64</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+    <Prefer32Bit>true</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x64'">
+    <OutputPath>bin\x64\Release\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <Optimize>false</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>x64</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+    <Prefer32Bit>true</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x86'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\x86\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+    <Prefer32Bit>true</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x86'">
+    <OutputPath>bin\x86\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>x64</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+    <Prefer32Bit>true</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationManifest>app.manifest</ApplicationManifest>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="DHS.ADB">
+      <HintPath>..\..\..\..\Documentos\Projetos Visual Studio\Best Projects\00 - Bibliotecas\DHS.ADB\DHS.ADB\bin\Release\DHS.ADB.dll</HintPath>
+    </Reference>
+    <Reference Include="DHS.Imaging">
+      <HintPath>..\..\..\..\Documentos\Projetos Visual Studio\Best Projects\00 - Bibliotecas\DHS.Imaging\DHS.Imaging\bin\Release\DHS.Imaging.dll</HintPath>
+    </Reference>
+    <Reference Include="DHS.IO">
+      <HintPath>..\..\..\..\Documentos\Projetos Visual Studio\Best Projects\00 - Bibliotecas\DHS.IO\DHS.IO\bin\Release\DHS.IO.dll</HintPath>
+    </Reference>
+    <Reference Include="DHS.Mathematics">
+      <HintPath>..\..\..\..\Documentos\Projetos Visual Studio\Best Projects\00 - Bibliotecas\DHS.Mathematics\DHS.Mathematics\bin\Release\DHS.Mathematics.dll</HintPath>
+    </Reference>
+    <Reference Include="DHS.Printing">
+      <HintPath>..\..\..\..\Documentos\Projetos Visual Studio\Best Projects\00 - Bibliotecas\DHS.Reporting\DHS.Reporting\bin\Release\DHS.Printing.dll</HintPath>
+    </Reference>
+    <Reference Include="DHS.Reporting">
+      <HintPath>..\..\..\..\Documentos\Projetos Visual Studio\Best Projects\00 - Bibliotecas\DHS.Reporting\DHS.Reporting\bin\Release\DHS.Reporting.dll</HintPath>
+    </Reference>
+    <Reference Include="DHS.Tasking">
+      <HintPath>..\..\..\..\Documentos\Projetos Visual Studio\Best Projects\00 - Bibliotecas\DHS.Tasking\DHS.Tasking\bin\Release\DHS.Tasking.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.4.4\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.4.4\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
+    <Reference Include="GMap.NET.Core, Version=2.1.7.0, Culture=neutral, PublicKeyToken=b85b9027b614afef, processorArchitecture=MSIL">
+      <HintPath>..\packages\GMap.NET.Core.2.1.7\lib\net472\GMap.NET.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="GMap.NET.WindowsForms, Version=2.1.7.0, Culture=neutral, PublicKeyToken=b85b9027b614afef, processorArchitecture=MSIL">
+      <HintPath>..\packages\GMap.NET.WinForms.2.1.7\lib\net472\GMap.NET.WindowsForms.dll</HintPath>
+    </Reference>
+    <Reference Include="GMap.NET.WindowsPresentation, Version=2.1.7.0, Culture=neutral, PublicKeyToken=b85b9027b614afef, processorArchitecture=MSIL">
+      <HintPath>..\packages\GMap.NET.WinPresentation.2.1.7\lib\net472\GMap.NET.WindowsPresentation.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json, Version=13.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\packages\Newtonsoft.Json.13.0.2\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="PresentationCore" />
+    <Reference Include="PresentationFramework" />
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.SqlClient, Version=4.6.1.5, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Data.SqlClient.4.8.5\lib\net461\System.Data.SqlClient.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Data.SQLite, Version=1.0.117.0, Culture=neutral, PublicKeyToken=db937bc2d44ff139, processorArchitecture=MSIL">
+      <HintPath>..\packages\Stub.System.Data.SQLite.Core.NetFramework.1.0.117.0\lib\net46\System.Data.SQLite.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Data.SQLite.EF6, Version=1.0.117.0, Culture=neutral, PublicKeyToken=db937bc2d44ff139, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Data.SQLite.EF6.1.0.117.0\lib\net46\System.Data.SQLite.EF6.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Data.SQLite.Linq, Version=1.0.117.0, Culture=neutral, PublicKeyToken=db937bc2d44ff139, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Data.SQLite.Linq.1.0.117.0\lib\net46\System.Data.SQLite.Linq.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Security.Principal.Windows, Version=5.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Security.Principal.Windows.5.0.0\lib\net461\System.Security.Principal.Windows.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Windows.Presentation" />
+    <Reference Include="System.Xaml" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="WindowsBase" />
+    <Reference Include="WindowsFormsIntegration" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Charting\ChartSeries.cs" />
+    <Compile Include="CustomViews\ChartView.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="CustomViews\ChartView.Designer.cs">
+      <DependentUpon>ChartView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CustomViews\CompareView.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="CustomViews\ImageEditView.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="CustomViews\ImageEditView.Designer.cs">
+      <DependentUpon>ImageEditView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CustomViews\NewMissonButton.cs" />
+    <Compile Include="CustomViews\OnReOrderIndexEventArgs.cs" />
+    <Compile Include="CustomViews\ReOrderPanel.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="DpiAwareFixer.cs" />
+    <Compile Include="Forms\DemoForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\DemoForm.Designer.cs">
+      <DependentUpon>DemoForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\FalseColors.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\FalseColors.Designer.cs">
+      <DependentUpon>FalseColors.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CustomViews\MissionOptions.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="CustomViews\MissionOptions.Designer.cs">
+      <DependentUpon>MissionOptions.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\ImagesForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\ImagesForm.Designer.cs">
+      <DependentUpon>ImagesForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Helpers\MetricsHelper.cs" />
+    <Compile Include="Forms\NoteForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\NoteForm.Designer.cs">
+      <DependentUpon>NoteForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Rastering\RasterData.cs" />
+    <Compile Include="Rastering\GeoTag.cs" />
+    <Compile Include="Forms\HelpForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\HelpForm.Designer.cs">
+      <DependentUpon>HelpForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Rastering\IndexEquation.cs" />
+    <Compile Include="Mapping\MapNote.cs" />
+    <Compile Include="Forms\MetricsForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\MetricsForm.Designer.cs">
+      <DependentUpon>MetricsForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\MountMapDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\MountMapDialog.Designer.cs">
+      <DependentUpon>MountMapDialog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Rastering\RangeValue.cs" />
+    <Compile Include="Rastering\RasterBatch.cs" />
+    <Compile Include="Rastering\RasterImage.cs" />
+    <Compile Include="Forms\Settings.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Settings.Designer.cs">
+      <DependentUpon>Settings.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Mapping\AgrarianMesure.cs" />
+    <Compile Include="CustomViews\SpinnerOption.cs" />
+    <Compile Include="CustomViews\SpinnerView.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="CustomViews\SpinnerView.Designer.cs">
+      <DependentUpon>SpinnerView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CustomViews\ListItemView.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="CustomViews\ListItemView.Designer.cs">
+      <DependentUpon>ListItemView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DJI\DJIMissionOption.cs" />
+    <Compile Include="CustomViews\BoxInfoView.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="CustomViews\BoxInfoView.Designer.cs">
+      <DependentUpon>BoxInfoView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DJI\DJIMissionBuilder.cs" />
+    <Compile Include="CustomViews\SwitchView.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="CustomViews\SwitchView.Designer.cs">
+      <DependentUpon>SwitchView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\InputName.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\InputName.designer.cs">
+      <DependentUpon>InputName.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CustomViews\NewMission.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="CustomViews\NewMission.Designer.cs">
+      <DependentUpon>NewMission.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CustomViews\SeekBarView.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="CustomViews\SeekBarView.Designer.cs">
+      <DependentUpon>SeekBarView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Mapping\Distances\Haversine.cs" />
+    <Compile Include="Mapping\Distances\Manhattan.cs" />
+    <Compile Include="Forms\SplashScreen.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\SplashScreen.designer.cs">
+      <DependentUpon>SplashScreen.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Mapping\NSize.cs" />
+    <Compile Include="Mapping\DrawSupport.cs" />
+    <Compile Include="Forms\RasterCalculator.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\RasterCalculator.Designer.cs">
+      <DependentUpon>RasterCalculator.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Rastering\RasterImageData.cs" />
+    <Compile Include="Utils\ControlUtil.cs" />
+    <Compile Include="Utils\DrawUtil.cs" />
+    <Compile Include="Utils\MetricsUtil.cs" />
+    <Compile Include="Mapping\Polygon.cs" />
+    <Compile Include="Mapping\Distances\IDistance.cs" />
+    <Compile Include="CustomViews\ColorSlider.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="CustomViews\ColorSlider.designer.cs">
+      <DependentUpon>ColorSlider.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CustomViews\CustomButton.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="CustomViews\CustomControl.cs" />
+    <Compile Include="CustomViews\GoogleMapsModes.cs" />
+    <Compile Include="CustomViews\GoogleMapsView.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Forms\Main.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Main.Designer.cs">
+      <DependentUpon>Main.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Mapping\Distances\Euclidean.cs" />
+    <Compile Include="Mapping\NPoint.cs" />
+    <Compile Include="Mapping\NPointList.cs" />
+    <Compile Include="Mapping\MissionPath.cs" />
+    <Compile Include="Mapping\PathPlanning.cs" />
+    <Compile Include="Mapping\ZigZagTracer.cs" />
+    <Compile Include="CustomViews\MapView.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="CustomViews\MapView.Designer.cs">
+      <DependentUpon>MapView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Management\NewNotificationEventArgs.cs" />
+    <Compile Include="Management\NotificationManager.cs" />
+    <Compile Include="CustomViews\NotificationView.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="CustomViews\NotificationView.Designer.cs">
+      <DependentUpon>NotificationView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Mapping\Segment.cs" />
+    <Compile Include="Forms\Testing.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Testing.Designer.cs">
+      <DependentUpon>Testing.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Utils\PolygonUtil.cs" />
+    <Compile Include="CustomViews\OnMapClickEventArgs.cs" />
+    <Compile Include="Utils\RasterUtil.cs" />
+    <Compile Include="Utils\TempUtil.cs" />
+    <Compile Include="Utils\TransferUtil.cs" />
+    <EmbeddedResource Include="CustomViews\ChartView.resx">
+      <DependentUpon>ChartView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CustomViews\BoxInfoView.resx">
+      <DependentUpon>BoxInfoView.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CustomViews\ImageEditView.resx">
+      <DependentUpon>ImageEditView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CustomViews\SpinnerView.resx">
+      <DependentUpon>SpinnerView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CustomViews\ListItemView.resx">
+      <DependentUpon>ListItemView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CustomViews\SwitchView.resx">
+      <DependentUpon>SwitchView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\DemoForm.resx">
+      <DependentUpon>DemoForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\FalseColors.resx">
+      <DependentUpon>FalseColors.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\ImagesForm.resx">
+      <DependentUpon>ImagesForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\InputName.resx">
+      <DependentUpon>InputName.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CustomViews\NewMission.resx">
+      <DependentUpon>NewMission.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CustomViews\SeekBarView.resx">
+      <DependentUpon>SeekBarView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CustomViews\MissionOptions.resx">
+      <DependentUpon>MissionOptions.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\NoteForm.resx">
+      <DependentUpon>NoteForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Settings.resx">
+      <DependentUpon>Settings.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\SplashScreen.resx">
+      <DependentUpon>SplashScreen.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Main.resx">
+      <DependentUpon>Main.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CustomViews\ColorSlider.resx">
+      <DependentUpon>ColorSlider.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CustomViews\MapView.resx">
+      <DependentUpon>MapView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CustomViews\NotificationView.resx">
+      <DependentUpon>NotificationView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\HelpForm.resx">
+      <DependentUpon>HelpForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\MetricsForm.resx">
+      <DependentUpon>MetricsForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <EmbeddedResource Include="Forms\Testing.resx">
+      <DependentUpon>Testing.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\RasterCalculator.resx">
+      <DependentUpon>RasterCalculator.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\MountMapDialog.resx">
+      <DependentUpon>MountMapDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <Content Include="ajuda.rtf">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <None Include="app.manifest" />
+    <Content Include="models\mavic2pro.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="models\phantom4pro.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="models\phantom4advanced.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="cameras\survey3.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="indicies.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="models\mavic2zoom.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="models\phantom3se.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\download_file.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\altura.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\angulo.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\area.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\bateria.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\drone.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\gsd.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\tempo.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\margem.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\error.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\info.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\settings.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\success.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\warning.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\advanced.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\collapse.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\expand.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\more.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\obstaculo.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\sobreposicao.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\apagar.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\velocidade.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\rth.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\final.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\head.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\usuario.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\editar.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\calculadora.png" />
+    <None Include="Resources\cores.png" />
+    <None Include="Resources\desenhar.png" />
+    <None Include="Resources\montar_mapa.png" />
+    <None Include="Resources\salvar.png" />
+    <None Include="Resources\pin.png" />
+    <None Include="Resources\left.png" />
+    <None Include="Resources\right.png" />
+    <None Include="Resources\desenhar_mapa.png" />
+    <None Include="Resources\montar.png" />
+    <None Include="Resources\metricas.png" />
+    <None Include="Resources\excluir.png" />
+    <None Include="Resources\mostrar.png" />
+    <None Include="Resources\ocultar.png" />
+    <None Include="Resources\imagens.png" />
+    <None Include="Resources\camera_intervalo.png" />
+    <None Include="Resources\gimbal_x.png" />
+    <None Include="Resources\gimbal_y.png" />
+    <None Include="Resources\gimbal_z.png" />
+    <None Include="Resources\tirar_fotos.png" />
+    <None Include="Resources\shadow.png" />
+    <None Include="Resources\modo.png" />
+    <None Include="Resources\down.png" />
+    <None Include="Resources\up.png" />
+    <None Include="Resources\loading.png" />
+    <Content Include="tools\exiftool.exe">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <None Include="Resources\metrics.png" />
+    <Content Include="icon.ico" />
+    <None Include="Resources\cultura.png" />
+    <None Include="Resources\help.png" />
+    <Content Include="tools\aapt.exe">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="tools\adb.exe">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="tools\AdbWinApi.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="tools\AdbWinUsbApi.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>Este projeto faz referência a pacotes do NuGet que não estão presentes neste computador. Use a Restauração de Pacotes do NuGet para baixá-los.  Para obter mais informações, consulte http://go.microsoft.com/fwlink/?LinkID=322105. O arquivo ausente é {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('..\packages\EntityFramework.6.4.4\build\EntityFramework.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\EntityFramework.6.4.4\build\EntityFramework.props'))" />
+    <Error Condition="!Exists('..\packages\EntityFramework.6.4.4\build\EntityFramework.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\EntityFramework.6.4.4\build\EntityFramework.targets'))" />
+    <Error Condition="!Exists('..\packages\Stub.System.Data.SQLite.Core.NetFramework.1.0.117.0\build\net46\Stub.System.Data.SQLite.Core.NetFramework.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Stub.System.Data.SQLite.Core.NetFramework.1.0.117.0\build\net46\Stub.System.Data.SQLite.Core.NetFramework.targets'))" />
+  </Target>
+  <Import Project="..\packages\EntityFramework.6.4.4\build\EntityFramework.targets" Condition="Exists('..\packages\EntityFramework.6.4.4\build\EntityFramework.targets')" />
+  <Import Project="..\packages\Stub.System.Data.SQLite.Core.NetFramework.1.0.117.0\build\net46\Stub.System.Data.SQLite.Core.NetFramework.targets" Condition="Exists('..\packages\Stub.System.Data.SQLite.Core.NetFramework.1.0.117.0\build\net46\Stub.System.Data.SQLite.Core.NetFramework.targets')" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

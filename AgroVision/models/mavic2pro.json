@@ -1,0 +1,40 @@
+{
+    "model": "Mavic 2 Pro",
+    "manufacturer": "DJI",
+    "maxBatteryMinutes": 25,
+    "sensors": {
+        "upSensor": {
+            "exists": true,
+            "enabled": true
+        },
+        "downSensor": {
+            "exists": true,
+            "enabled": true
+        },
+        "collisionSensor": {
+            "exists": true,
+            "enabled": false
+        },
+        "sideSensor": {
+            "exists": true,
+            "enabled": true
+        },
+        "landingSensor": {
+            "exists": true,
+            "enabled": true
+        },
+        "apasSensor": {
+            "exists": true,
+            "enabled": true
+        },
+        "rthSensor": {
+            "exists": true,
+            "enabled": true
+        }
+    },
+    "camera": {
+        "width": 5472,
+        "sensorWidthInMm": 13.2,
+        "focalLengthInMm": 28
+    }
+}

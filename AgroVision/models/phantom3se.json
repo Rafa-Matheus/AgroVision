@@ -1,0 +1,40 @@
+{
+    "model": "Phantom 3 SE",
+    "manufacturer": "DJI",
+    "maxBatteryMinutes": 23,
+    "sensors": {
+        "upSensor": {
+            "exists": false,
+            "enabled": false
+        },
+        "downSensor": {
+            "exists": true,
+            "enabled": false
+        },
+        "collisionSensor": {
+            "exists": false,
+            "enabled": false
+        },
+        "sideSensor": {
+            "exists": false,
+            "enabled": false
+        },
+        "landingSensor": {
+            "exists": false,
+            "enabled": false
+        },
+        "apasSensor": {
+            "exists": false,
+            "enabled": false
+        },
+        "rthSensor": {
+            "exists": true,
+            "enabled": true
+        }
+    },
+    "camera": {
+        "width": 4000,
+        "sensorWidthInMm": 6.3,
+        "focalLengthInMm": 20
+    }
+}

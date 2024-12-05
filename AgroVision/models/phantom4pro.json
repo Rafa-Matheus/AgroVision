@@ -1,0 +1,40 @@
+{
+    "model": "Phantom 4 Pro",
+    "manufacturer": "DJI",
+    "maxBatteryMinutes": 30,
+    "sensors": {
+        "upSensor": {
+            "exists": false,
+            "enabled": false
+        },
+        "downSensor": {
+            "exists": true,
+            "enabled": false
+        },
+        "collisionSensor": {
+            "exists": true,
+            "enabled": true
+        },
+        "sideSensor": {
+            "exists": true,
+            "enabled": true
+        },
+        "landingSensor": {
+            "exists": true,
+            "enabled": false
+        },
+        "apasSensor": {
+            "exists": true,
+            "enabled": true
+        },
+        "rthSensor": {
+            "exists": true,
+            "enabled": true
+        }
+    },
+    "camera": {
+        "width": 5472,
+        "sensorWidthInMm": 13.2,
+        "focalLengthInMm": 24
+    }
+}

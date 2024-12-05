@@ -1,0 +1,17 @@
+[
+    {
+        "name": "NDVI",
+        "equation": "(B-R)/(B+R)",
+        "description": "O índice de vegetação com diferença normalizada é um indicador gráfico simples que pode ser usado para analisar medições de sensoriamento remoto, geralmente a partir de uma plataforma espacial, avaliando se o alvo observado ou não contém vegetação verde viva."
+    },
+    {
+        "name": "VARI",
+        "equation": "(G-R)/(G+R-B)",
+        "description": "O índice de vegetação VARI (índice de resistência atmosférica visível (VARI)) é desenhado para enfatizar a vegetação na porção visível do espectro no mesmo tempo que mitiga as diferenças de iluminação e os efeitos atmosféricos."
+    },
+    {
+        "name": "IVF",
+        "equation": "(2*G-R-B)/(2*G+R+B)",
+        "description": "O Índice Foliar Verde é um índice que se baseia na relação entre a área da folhagem da planta e a superfície do solo por ela ocupada. Ele é utilizado para diferenciar a cobertura do solo, evidenciando áreas plantadas, áreas com falhas no plantio e solo exposto."
+    }
+]
